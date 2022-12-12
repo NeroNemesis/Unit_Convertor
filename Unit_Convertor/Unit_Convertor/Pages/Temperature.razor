@@ -1,0 +1,19 @@
+﻿@page "/temperature"
+@using Unit_Convertor.Data
+
+<h3>Temperature</h3>
+
+@code {
+    private ConvertionStrings convertionStrings = new ConvertionStrings();
+    private string Querry = String.Empty;
+
+    protected override async Task OnInitializedAsync () => Hydrate();
+
+    private void Hydrate()
+    {
+        convertionStrings.Temp_unit = "Celsius-Fahrenheit-Kelvin";
+        convertionStrings.Cels = "0-32-273.15";
+        convertionStrings.Fahren = "-17.7778-0-255.372";
+        convertionStrings.Kelv = "-273.15--459.67-0";
+    }
+}

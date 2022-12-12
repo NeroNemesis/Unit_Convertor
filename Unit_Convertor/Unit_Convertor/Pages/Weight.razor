@@ -1,0 +1,25 @@
+﻿@page "/weight"
+@using Unit_Convertor.Data
+
+<h3>Weight</h3>
+
+@code {
+    private ConvertionStrings convertionStrings = new ConvertionStrings();
+    private string Querry = String.Empty;
+
+    protected override async Task OnInitializedAsync () => Hydrate();
+
+    private void Hydrate ()
+    {
+        convertionStrings.Weight_unit = "Kilogram-Gram-Decigram-centigram-milligram-stone-lib-once";
+        convertionStrings.Kg = "1-1000-10000-100000-1000000-0.157473-2.204621999990873-35.273951999853970563";
+        convertionStrings.G = "0.001-1-10-100-1000-0.000157473-0.00220462-0,035274";
+        convertionStrings.Dg = "0.0001-0.1-1-10-100-0.0000157473-0.000220462-0.0035274";
+        convertionStrings.Cg = "0.00001-0.01-0.1-1-10-0.00000157473-0.0000220462-0.00035274";
+        convertionStrings.Mg = "0.000001-0.001-0.01-0.1-1-0.000000157473-0.00000220462-0.000035274";
+        convertionStrings.St = "6.35029-6350.293-63502.93-635029.3-6350293-1-14-224";
+        convertionStrings.Lb = "0.453592-453.592-4535.92-45359.2-453592-0.0714286-1-16";
+        convertionStrings.Ounce = "0.0283495-28.3495-280.3495-2800.3495-28000,3495-0.00446429-0.0625-1";
+    }
+
+}

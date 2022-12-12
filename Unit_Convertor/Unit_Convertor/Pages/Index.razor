@@ -1,0 +1,10 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Unit Convertor</PageTitle>
+
+<h1>Choose a convertor to get started!</h1>
+
+<button class="btn btn-success" @onclick="@(() => NavigationManager.NavigateTo("/distance"))">Distance</button>
+<button class="btn btn-primary" @onclick="@(() => NavigationManager.NavigateTo("/temperature"))">Temperature</button>
+<button class="btn btn-secondary" @onclick="@(() => NavigationManager.NavigateTo("/weight"))">Weight</button>
